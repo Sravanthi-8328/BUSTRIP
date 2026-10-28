@@ -28,6 +28,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ./Frontend-BusTrip/bustrip-frontend
+          file: ./Frontend-BusTrip/bustrip-frontend/Dockerfile
           push: true
           tags: sravanthi2580/bustrip-frontend:latest
 
@@ -35,6 +36,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ./CrudServiceProject
+          file: ./CrudServiceProject/Dockerfile
           push: true
           tags: sravanthi2580/bustrip-backend:latest
 
@@ -42,5 +44,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ./EurekaServer
+          file: ./EurekaServer/Dockerfile
           push: true
           tags: sravanthi2580/bustrip-eureka-server:latest
